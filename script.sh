@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 while true; do
-    name=$(dialog --keep-tite --title 'Important information' --inputbox 'Please enter the name: ' 10 40 2>&1 >/dev/tty)
+    name=$(dialog --keep-tite --title 'Important information' --backtitle 'Course signup' --inputbox 'Please enter the name: ' 10 40 2>&1 >/dev/tty)
     if (( $? != 0 )); then
         break
     elif [[ -n "${name}" ]]; then
